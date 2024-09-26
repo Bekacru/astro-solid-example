@@ -16,10 +16,6 @@ export const {
   resetPassword,
   sendVerificationEmail,
 } = createAuthClient({
-  baseURL:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : undefined,
   plugins: [
     passkeyClient(),
     twoFactorClient({
