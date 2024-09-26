@@ -24,9 +24,4 @@ export const {
   ],
 });
 
-export const { useSession: useVanillaSession } = createVanillaClient({
-  baseURL:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : undefined,
-});
+export const { useSession: useVanillaSession } = createVanillaClient();
